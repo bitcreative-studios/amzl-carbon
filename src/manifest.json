@@ -1,0 +1,32 @@
+{
+  "name": "AMZL Toolkit",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "description": "A firefox extension boilerplate built with React 17, Webpack 5, and Webpack Dev Server 4",
+  "options_ui": {
+    "page": "options.html"
+  },
+  "background": { "scripts": ["background.bundle.js"] },
+  "sidebar_action": {
+    "default_panel": "sidebar.html",
+    "default_icon": "amazon-icon.svg"
+  },
+  "icons": {
+    "128": "amazon-icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "js": ["contentScript.bundle.js"],
+      "css": ["content.styles.css"]
+    }
+  ],
+  "commands": {
+    "_execute_sidebar_action": {
+      "description": "Open AMZL Toolkit Sidebar",
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      }
+    }
+  }
+}

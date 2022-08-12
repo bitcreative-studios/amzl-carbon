@@ -1,0 +1,24 @@
+@use '@carbon/styles/scss/themes';
+@use '@carbon/styles/scss/theme';
+@use '@carbon/styles/scss/colors' as *;
+
+// Use the gray 90 theme
+$theme: themes.$g100;
+$colors: (
+  blue: (
+    10: #d7f6ff,
+    20: #aae5ff,
+    30: #7ad8ff,
+    40: #48ceff,
+    50: #1ac7ff,
+    60: #00b6e6,
+    70: #0082b4,
+    80: #005482,
+    90: #002e50,
+    100: #000d20,
+  ),
+);
+
+:root {
+  @include theme.theme($theme);
+}
